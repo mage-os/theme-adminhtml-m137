@@ -8,7 +8,7 @@
 @import 'order/_info.less';
 @import 'order/_items.less';
 @import 'order/_order-account.less';
-// @import 'order/_payment-shipping.less';
+@import 'order/_payment-shipping.less';
 @import 'order/_sidebar.less';
 // @import 'order/_sku.less';
 // @import 'order/_total.less';
@@ -43,7 +43,7 @@
     .page-create-order {
         display: flex;
         gap: @indent__l;
-        
+
         .order-details {
             width: unset;
             flex: auto;
@@ -89,7 +89,8 @@
     .admin__page-section {
         margin-bottom: @indent__l;
 
-        &.inventory {
+        &.inventory,
+        &.order-addresses {
             margin-bottom: @indent__l;
         }
     }
@@ -120,11 +121,11 @@
     background-color: @color-white;
     border-radius: @radius__l;
     padding: @indent__l;
-        
+
     &:last-of-type {
         margin-bottom: 0;
     }
-    
+
     &:first-of-type {
         margin-bottom: @indent__l;
     }
