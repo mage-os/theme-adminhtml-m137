@@ -84,6 +84,24 @@
         &:extend(.abs-control-checkbox all);
     }
 
+    input[type="radio"] {
+        border-radius: 50%;
+
+        &:checked {
+            &:after {
+                content: '';
+                position: absolute;
+                top: ~'calc(50% - 3px)';
+                left: ~'calc(50% - 3px)';
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: currentColor;
+            }
+        }
+    }
+
     input[disabled],
     select[disabled],
     textarea[disabled],
